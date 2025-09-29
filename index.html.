@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Lista de tarefas - Aula 1</title>
+<link rel="styleesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Lista de tarefas - DOM (Aula 1)</h1>
+<form id="taskform">
+<input id="taskInput" type="text" placeholder="Escreva uma tarefa..." requised>
+<button type="submit">Adicionar</button>
+</form>
+
+<ul id="taskList">
+<!-- Tarefas vão aparecer aqui -->
+</ul>
+</div>
+<!-- Sem script nesta aula -->
+</body>
+</html>
