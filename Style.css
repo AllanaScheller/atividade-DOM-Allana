@@ -1,47 +1,90 @@
+style.css 
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f5f7fa;
-    padding: 30px;
+font-family: Arial, sans-serif;
+background-color: #f4f4f9;
+padding: 20px;
 }
 
 .container {
-    max-width: 640px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 18px;
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(0,0,0,.06);
+max-width: 600px;
+margin: 0 auto;
+background: #fff;
+padding: 30px;
+border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-form {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
+#taskForm {
+display: flex;
+margin-bottom: 20px;
 }
 
-input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+#taskInput {
+flex-grow: 1;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 4px 0 0 4px;
 }
 
-button {
-    padding: 10px 12px;
-    border-radius: 6px;
-    border: 0;
-    background:#0b74da;
-    color: #fff;
-    cursor: pointer;
+#taskForm button {
+padding: 10px 15px;
+border: none;
+background-color: #007bff;
+color: white;
+cursor: pointer;
+border-radius: 0 4px 4px 0;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+#taskList {
+list-style: none;
+padding: 0;
 }
 
-li {
-    padding: 8px 10px;
-    border-bottom: 1px solid #eee;
+/* Estilo para cada item da lista */
+.task-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+margin-bottom: 8px;
+background-color: #e9ecef;
+border-radius: 4px;
+transition: background-color 0.3s;
+}
+
+/* NOVO: Estilo para tarefa concluída */
+.task-item.completed {
+background-color: #d4edda;
+text-decoration: line-through;
+color: #6c757d;
+}
+
+.task-actions button {
+margin-left: 5px;
+padding: 5px 10px;
+border: none;
+cursor: pointer;
+border-radius: 3px;
+}
+
+.task-actions .complete-btn { background-color: #28a745; color: white; }
+.task-actions .edit-btn { background-color: #ffc107; color: #333; }
+.task-actions .delete-btn { background-color: #dc3545; color: white; }
+
+/* Estilo dos Filtros */
+.filters button {
+padding: 8px 15px;
+margin-right: 5px;
+border: 1px solid #ccc;
+background: #f8f9fa;
+cursor: pointer;
+border-radius: 4px;
+margin-bottom: 15px;
+}
+
+.filters button.active {
+background-color: #007bff;
+color: white;
+border-color: #007bff;
 }
